@@ -1,0 +1,35 @@
+{
+  "name": "furniture-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@cloudinary/url-gen": "^2.0.0",
+    "@cloudinary/url-gen/actions/resize": "^2.0.0",
+    "@cloudinary/url-gen/qualifiers/format": "^2.0.0",
+    "@cloudinary/url-gen/qualifiers/quality": "^2.0.0",
+    "@cloudinary/url-gen/qualifiers/size": "^2.0.0",
+    "axios": "^1.6.7",
+    "cloudinary": "^2.0.0",
+    "next": "14.1.0",
+    "next-sitemap": "^4.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1",
+    "react-toastify": "^10.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.3",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0"
+  }
+}
