@@ -4,17 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "postbuild": "next-sitemap",
+    "build": "next build && next-sitemap",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@cloudinary/url-gen": "^2.0.0",
-    "@cloudinary/url-gen/actions/resize": "^2.0.0",
-    "@cloudinary/url-gen/qualifiers/format": "^2.0.0",
-    "@cloudinary/url-gen/qualifiers/quality": "^2.0.0",
-    "@cloudinary/url-gen/qualifiers/size": "^2.0.0",
     "axios": "^1.6.7",
     "cloudinary": "^2.0.0",
     "next": "14.1.0",

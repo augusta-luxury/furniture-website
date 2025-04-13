@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://augustaluxury.in',
+  siteUrl: process.env.SITE_URL || 'https://augustaluxury.in',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [
@@ -11,12 +11,22 @@ module.exports = {
       }
     ],
     additionalSitemaps: [
-      'https://augustaluxury.in/sitemap.xml'
+      `${process.env.SITE_URL || 'https://augustaluxury.in'}/sitemap.xml`
     ]
   },
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 7000,
   exclude: ['/admin9876/*', '/api/*'],
-  generateIndexSitemap: true
+  generateIndexSitemap: true,
+  outDir: 'public',
+  sourceDir: '.next',
+  transform: async (config, path) => {
+    return {
+      loc: path,
+      changefreq: config.changefreq,
+      priority: config.priority,
+      lastmod: config.autoLastmod ? new Date().toISOString() : undefined,
+    }
+  }
 } 

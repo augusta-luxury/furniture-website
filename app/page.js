@@ -118,6 +118,12 @@ export default function Home() {
       <main>
         <Hero />
         <CategoryGrid />
+        <section className="container mx-auto px-6 py-12">
+          <h2 className="text-gray-600 mb-4">Discover Our Signature Pieces</h2>
+          <h3 className="font-cormorant text-4xl md:text-5xl font-semibold">
+            CRAFTED FOR ELEGANCE
+          </h3>
+        </section>
         <FeaturedProducts />
       </main>
     </>
